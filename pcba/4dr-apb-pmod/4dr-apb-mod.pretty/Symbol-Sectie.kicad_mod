@@ -1,0 +1,14 @@
+(footprint "Symbol-Sectie" (version 20221018) (generator pcbnew)
+  (layer "F.Cu")
+  (attr smd)
+  (fp_text reference "REF**" (at 0 -0.5 unlocked) (layer "F.Fab") hide
+      (effects (font (size 1 1) (thickness 0.1)))
+    (tstamp f537e868-beaf-4881-910f-aceb2145bf2c)
+  )
+  (fp_text value "Symbol-Sectie" (at 0 1 unlocked) (layer "F.Fab") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 181e788e-6ce6-49ca-9e6b-4a8018f6d7ae)
+  )
+  (fp_line (start 6.35 0) (end -6.35 0)
+    (stroke (width 1) (type default)) (layer "F.SilkS") (tstamp fe477aa4-3b70-4141-aa15-27a67c346595))
+)

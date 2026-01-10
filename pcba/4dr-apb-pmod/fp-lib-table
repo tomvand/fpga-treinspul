@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "4dr-apb-mod")(type "KiCad")(uri "${KIPRJMOD}/4dr-apb-mod.pretty")(options "")(descr ""))
+)
