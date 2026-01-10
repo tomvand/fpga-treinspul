@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  fpga-dev:
+  image: icestudio-kicad
+  build: .
+  container_name: icestudio_kicad
+  environment:
+    - DISPLAY=${DISPLAY}
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - .:/workspace
+  working_dir: /workspace
+  stdin_open: true
+  tty: true
+  network_mode: host
