@@ -1,4 +1,4 @@
-FROM debian:13
+FROM ubuntu:22.04
 
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -10,10 +10,10 @@ sudo \
 wget \
 curl \
 git \
+software-properties-common \
 ca-certificates \
 gnupg \
 lsb-release \
-software-properties-common \
 x11-apps \
 libgtk-3-0 \
 libnotify4 \
@@ -21,8 +21,9 @@ libnss3 \
 libxss1 \
 libxtst6 \
 xdg-utils \
-fuse \
-&& rm -rf /var/lib/apt/lists/*
+fuse
+
+# && rm -rf /var/lib/apt/lists/*
 
 
 # -----------------------------
@@ -30,8 +31,8 @@ fuse \
 # -----------------------------
 RUN add-apt-repository --yes ppa:kicad/kicad-9.0-releases && \
 apt-get update && \
-apt-get install -y kicad && \
-rm -rf /var/lib/apt/lists/*
+apt-get install -y kicad
+# rm -rf /var/lib/apt/lists/*
 
 # -----------------------------
 # Install Yosys FPGA toolchain
@@ -39,7 +40,6 @@ rm -rf /var/lib/apt/lists/*
 RUN apt-get update && apt-get install -y \
 yosys \
 nextpnr-ice40 \
-icepack \
 iverilog \
 && rm -rf /var/lib/apt/lists/*
 
@@ -48,7 +48,7 @@ iverilog \
 # -----------------------------
 # Icestudio is distributed as an AppImage
 RUN wget -O /usr/local/bin/icestudio.AppImage \
-https://github.com/FPGAwars/icestudio/releases/latest/download/icestudio-x86_64.AppImage && \
+https://github.com/FPGAwars/icestudio/releases/download/v0.12/icestudio-0.12-linux64.AppImage && \
 chmod +x /usr/local/bin/icestudio.AppImage
 
 
@@ -67,4 +67,3 @@ WORKDIR /home/dev
 
 
 CMD ["bash"]
-
