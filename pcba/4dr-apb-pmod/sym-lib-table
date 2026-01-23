@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "switches")(type "KiCad")(uri "/home/colomax/Documents/code-projects/fpga/fpga-treinspul/pcba/libs/2026-01-11_21-53-48.kicad_sym")(options "")(descr ""))
+)
